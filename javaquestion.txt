@@ -1,0 +1,154 @@
+Core Java & JVM
+
+1. Explain JVM architecture
+2. Difference between JDK, JRE, and JVM
+3. How Garbage Collection works in Java?
+4. Types of Garbage Collectors
+5. What is a memory leak in Java?
+6. Heap vs Stack memory
+7. String vs StringBuilder vs StringBuffer
+8. How HashMap works internally?
+9. HashMap vs ConcurrentHashMap
+10. Why String is immutable?
+11. equals() vs hashCode()
+12. What is ClassLoader?
+13. Explain Reflection API
+14. What are Soft, Weak, and Phantom references?
+15. What is Autoboxing and Unboxing?
+16. Serialization vs Deserialization
+17. Fail-fast vs Fail-safe iterators
+18. What is volatile keyword?
+19. What is transient keyword?
+20. Platform independence in Java
+21. Java IO vs NIO
+22. What is Optional in Java 8?
+23. What is Stream API?
+24. map() vs flatMap()
+25. Functional Interface
+
+Multithreading & Concurrency
+26. Thread lifecycle
+27. Runnable vs Callable
+28. ExecutorService
+29. Types of Thread Pools
+30. Deadlock and prevention
+31. Race condition
+32. Synchronization
+33. synchronized vs Lock
+34. ReentrantLock
+35. Semaphore
+36. CountDownLatch
+37. CyclicBarrier
+38. ForkJoinPool
+39. Atomic variables
+40. Compare-And-Swap (CAS)
+41. ThreadLocal
+42. Happens-Before relationship
+43. BlockingQueue
+44. Producer-Consumer problem
+45. Designing high-performance multithreading
+
+Spring & Dependency Injection
+46. Dependency Injection
+47. Spring Bean lifecycle
+48. @Component vs @Service vs @Repository
+49. Constructor Injection vs Field Injection
+50. AOP in Spring
+51. Proxy in Spring
+
+Web Services & Security
+52. REST vs SOAP
+53. Spring Boot Auto-Configuration
+54. Spring Security flow
+55. OAuth2
+56. JWT
+
+Microservices & Distributed Systems
+57. Circuit Breaker pattern
+58. Service Discovery (Eureka)
+59. API Gateway
+60. Feign Client
+61. Load Balancer
+62. Config Server
+63. Kafka architecture
+64. Event-Driven Architecture
+65. Saga Pattern
+66. Distributed Tracing
+67. Resilience4j
+
+Containers & Deployment
+68. Docker with Spring Boot
+69. Kubernetes deployment strategies
+70. Blue-Green deployment
+
+JVM Internals & Performance
+71. JIT Compiler
+72. Metaspace vs PermGen
+73. Heap Dump analysis
+74. OutOfMemoryError troubleshooting
+75. GC tuning
+76. Stop-The-World events
+77. Escape Analysis
+78. Object Pooling
+79. ClassLoader memory leak
+80. JVM Profiling tools
+81. JMX
+82. Memory Thrashing
+83. CPU profiling
+
+Reactive & Asynchronous
+84. Asynchronous processing
+85. Reactive Programming
+
+Design Patterns & Architecture
+86. Singleton pattern (thread-safe)
+87. Factory vs Abstract Factory
+88. Builder pattern
+89. Strategy pattern
+90. Observer pattern
+91. Proxy pattern
+92. Circuit Breaker pattern
+93. CQRS
+94. Event Sourcing
+
+System Design & Principles
+95. SOLID principles
+96. Microservices vs Monolith
+97. CAP Theorem
+98. Idempotency in REST APIs
+99. Rate Limiting design
+100. Design a high-traffic REST API
+
+---
+
+Exception Handling (Indexed from 101)
+101. What is an Exception in Java?
+102. Checked vs Unchecked Exceptions
+103. Error vs Exception
+104. Exception hierarchy in Java
+105. throw vs throws
+106. try-catch-finally flow rules
+107. Can finally block skip execution?
+108. Custom exceptions (checked & unchecked)
+109. Best practices for exception handling
+110. What is Multi-Catch block?
+111. try-with-resources and AutoCloseable
+112. Suppressed exceptions in try-with-resources
+113. Difference between NoSuchMethodException, NullPointerException, ClassNotFoundException, etc.
+114. What is OutOfMemoryError and how to handle it?
+115. StackOverflowError cause and prevention
+116. What is Exception Chaining and why is it useful?
+117. Logging vs Rethrowing exceptions
+118. Why should we avoid catching generic Exception?
+119. Checked exceptions criticism (why many frameworks avoid them)
+120. How frameworks like Spring handle exceptions?
+121. Global exception handling in Spring Boot (@ControllerAdvice)
+122. ResponseStatusException vs @ExceptionHandler
+123. When to use RuntimeException
+124. What is CompletionException in async programming?
+125. Exception handling in threads (UncaughtExceptionHandler)
+126. Exception handling in ExecutorService tasks
+127. Exception handling in CompletableFuture
+128. Exception mapping in REST APIs
+129. Difference between HTTP error status and Java exceptions
+130. Circuit breaker exception handling logic (Resilience4j)
