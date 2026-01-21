@@ -27,37 +27,54 @@ public class Java8Program {
 		employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 		employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
 
+		
 		System.out.println("Q1 "
 				+ employeeList.stream().collect(Collectors.groupingBy(Employee::getGender, Collectors.counting())));
+		
 		System.out.println(
 				"Q2 " + employeeList.stream().map(Employee::getDepartment).distinct().collect(Collectors.toList()));
+		
 		System.out.println("Q3 " + employeeList.stream()
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge))));
+		
 		System.out.println("Q4 " + employeeList.stream().max(Comparator.comparingDouble(Employee::getSalary)).get());
+		
 		System.out.println("Q5 " + employeeList.stream().filter(e -> e.getYearOfJoining() > 2015).map(Employee::getName)
 				.collect(Collectors.toList()));
+		
 		System.out.println("Q6 "
 				+ employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting())));
+		
 		System.out.println("Q7 " + employeeList.stream().collect(
 				Collectors.groupingBy(Employee::getDepartment, Collectors.averagingDouble(Employee::getSalary))));
+		
 		System.out.println("Q8 " + employeeList.stream()
 				.filter(e -> e.getGender().equals("Male") && e.getDepartment().equals("Product Development"))
 				.min(Comparator.comparingInt(Employee::getAge)).get());
+		
 		System.out
 				.println("Q9 " + employeeList.stream().min(Comparator.comparingInt(Employee::getYearOfJoining)).get());
+		
 		System.out.println("Q10 " + employeeList.stream().filter(e -> e.getDepartment().equals("Sales And Marketing"))
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting())));
+		
 		System.out.println("Q11 " + employeeList.stream()
 				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingDouble(Employee::getSalary))));
+	
 		System.out.println("Q12 " + employeeList.stream().collect(Collectors.groupingBy(Employee::getDepartment,
 				Collectors.mapping(Employee::getName, Collectors.toList()))));
+		
 		DoubleSummaryStatistics stats = employeeList.stream()
 				.collect(Collectors.summarizingDouble(Employee::getSalary));
 		System.out.println("Q13 Avg=" + stats.getAverage() + ", Total=" + stats.getSum());
+		
 		Map<Boolean, List<Employee>> part = employeeList.stream()
 				.collect(Collectors.partitioningBy(e -> e.getAge() <= 25));
+		
 		System.out.println("Q14 <=25=" + part.get(true));
+		
 		System.out.println("Q14 >25=" + part.get(false));
+		
 		Employee oldest = employeeList.stream().max(Comparator.comparingInt(Employee::getAge)).get();
 		System.out.println("Q15 " + oldest.getName() + ", Age=" + oldest.getAge() + ", Dept=" + oldest.getDepartment());
 	}
